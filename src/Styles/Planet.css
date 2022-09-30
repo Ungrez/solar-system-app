@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  background-image: url("../textures/stars.jpg");
+}
+div#canvas-container {
+  position: absolute;
+  width: 120vw;
+  height: 30vh;
+  top: 0;
+  right: 0;
+  transform: translate(15%, 50%);
+  z-index: 1;
+}
