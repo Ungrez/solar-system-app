@@ -12,15 +12,20 @@ div#about-planet {
   color: #ffffff;
   padding: 20px;
   justify-content: flex-end;
+  overflow-y: hidden;
+  max-width: 90%;
+  transition: 0.5s;
 }
 div#about-planet h1 {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 div#about-planet p {
   color: rgb(165, 165, 165);
+  margin-left: 5px;
   margin-bottom: 30px;
+  line-height: 1.3;
 }
 div#about-planet h4 {
   color: rgb(145, 81, 212);

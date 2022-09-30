@@ -3,51 +3,10 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import "../Styles/Planet.css";
 import { TextureLoader } from "three";
-import sunTexture from "../textures/sun.jpg";
-import mercuryTexture from "../textures/mercury.jpg";
-import venusTexture from "../textures/venus.jpg";
-import earthTexture from "../textures/earth.jpg";
-import marsTexture from "../textures/mars.jpg";
-import jupiterTexture from "../textures/jupiter.jpg";
-import saturnTexture from "../textures/saturn.jpg";
-import uranusTexture from "../textures/uranus.jpg";
-import neptuneTexture from "../textures/neptune.jpg";
+import { planetsTexture, planets } from "./Data";
 
-const Planet = () => {
-  const [index, setIndex] = useState(0);
-  const [planet, setPlanet] = useState("earth");
-  const planetsTexture = [
-    sunTexture,
-    mercuryTexture,
-    venusTexture,
-    earthTexture,
-    marsTexture,
-    jupiterTexture,
-    saturnTexture,
-    uranusTexture,
-    neptuneTexture,
-  ];
-  const planets = [
-    "mercury",
-    "wenus",
-    "earth",
-    "mars",
-    "jupiter",
-    "saturn",
-    "uranus",
-    "neptune",
-  ];
-  useEffect(() => {
-    const interval = setInterval(
-      () =>
-        setIndex((index) => {
-          if (index < planets.length - 1) return index + 1;
-          return setIndex(0);
-        }),
-      8000
-    );
-    return () => clearInterval(interval);
-  }, []);
+const Planet = ({ props }) => {
+  const { index } = props;
 
   const Light = ({ brightness, color }) => {
     return (
@@ -72,7 +31,7 @@ const Planet = () => {
       <mesh
         ref={mySphere}
         visible
-        position={[0, 0, 0]}
+        position={[1.5, 0, 0]}
         rotation={[0, 0, 0]}
         castShadow
       >
@@ -93,7 +52,7 @@ const Planet = () => {
     <div id="canvas-container">
       <Canvas>
         <Sphere />
-        <Light brightness={1.5} color={"white"} />
+        <Light brightness={2} color={"white"} />
         <OrbitControls />
       </Canvas>
     </div>
