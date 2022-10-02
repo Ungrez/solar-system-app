@@ -4,3 +4,15 @@
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
 }
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  background-image: url("../textures/stars.jpg");
+  overflow: hidden;
+  animation: waveStar 60s linear infinite;
+}
+@keyframes waveStar {
+  0% {
+    background-position: right;
+  }
+}

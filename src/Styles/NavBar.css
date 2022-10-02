@@ -1,0 +1,23 @@
+nav#nav-bar {
+  display: flex;
+  position: fixed;
+  width: 90vw;
+  bottom: 3vh;
+  left: 5vw;
+  height: 10vh;
+  background-color: rgb(37, 36, 36);
+  color: #ffffff;
+  justify-content: space-around;
+  border-radius: 5vw;
+  align-items: center;
+  z-index: 0;
+}
+nav#nav-bar a svg {
+  font-size: 36px;
+  color: #e6e6e6;
+  transition: 0.3s;
+}
+nav#nav-bar a.active svg {
+  color: yellow;
+  position: relative;
+}

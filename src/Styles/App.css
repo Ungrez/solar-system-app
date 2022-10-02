@@ -1,24 +1,7 @@
 div#app-container {
+  position: relative;
   max-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  animation: nextSlide 8s 0.5s linear infinite;
-  transform: translateX(200vw);
-}
-@keyframes nextSlide {
-  0% {
-    transform: translateX(200vw);
-  }
-  10% {
-    transform: translateX(0);
-  }
-  90% {
-    transform: translateX(0);
-  }
-  95% {
-    transform: translateX(-200vw);
-  }
-  100% {
-    transform: translateX(-200vw);
-  }
+  z-index: 1;
 }
