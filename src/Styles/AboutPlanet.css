@@ -12,7 +12,7 @@ div.about-planet {
   padding: 20px;
   justify-content: space-evenly;
   transition: 0.8s;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 div.about-planet svg {
   z-index: 3;
